@@ -1,24 +1,23 @@
 
-
 #rect {
     width: 200px;
     height: 100px;
     background-color: red;
-
 }
 
 #roue1 {
     display: inline-block;
-
     position: relative;
-     width: 50px;
-     height: 50px;
-     left: 10px;
-     border-radius: 100%;
-     border-style: dashed;
-     background-color: blue;
-     animation-name: rotation-roue;
-     animation-duration: 10s;
+    width: 50px;
+    height: 50px;
+    left: 10px;
+    border-radius: 100%;
+    border-style: dashed;
+    background-color: blue;
+    animation-name: rotation-roue;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #roue2 {
@@ -32,6 +31,8 @@
     background-color: blue;
     animation-name: rotation-roue;
     animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 
@@ -40,15 +41,36 @@
     position: absolute;
     animation-name: direction-voiture;
     animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 
 @keyframes direction-voiture {
-
+    from {
+        left: 0;
+    }
+    to {
+        left: 87%;
+    }
 }
 
 @keyframes rotation-roue {
-
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -91,7 +113,7 @@
 
 #n4 {
     top: 50px;
-    left:30px;
+    left: 30px;
     border-radius: 100%;
     background-color: white;
     position: absolute;
@@ -103,10 +125,16 @@
     position: absolute;
     animation-name: nuage;
     animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 
-
 @keyframes nuage {
-
+    from {
+        left: 0;
+    }
+    to {
+        left: 92%;
+    }
 }
