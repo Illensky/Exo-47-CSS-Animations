@@ -1,6 +1,16 @@
-#foo {
-    width: 100px;
-    height: 100px;
-    background: red;
+@keyframes bgChange {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: green;
+    }
 }
 
+#foo {
+    animation-name: bgChange;
+    animation-duration: 3s;
+    width: 10vw;
+    height: 10vh;
+    background: red;
+}
